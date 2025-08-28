@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void set(int A[], int n, int i, int j, int x) {
+/*void set(int A[], int n, int i, int j, int x) {
     if (i == j) 
         A[i-1] = x; 
 }
@@ -34,4 +34,4 @@ int main() {
     display(A, n);
 
     return 0;
-}
+}*/
