@@ -123,7 +123,7 @@ int main() {
     int size = n*(n+1)/2;   
     int A[size] = {0};
 
-    // Fill matrix
+    
     set(A, n, 1,1,1);
     set(A, n, 2,1,2);
     set(A, n, 2,2,3);
