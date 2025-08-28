@@ -140,3 +140,55 @@ int main() {
 
     return 0;
 }*/
+
+
+
+
+/*void set(int A[], int n, int i, int j, int x) {
+    if (i <= j) {
+        int index = (i-1)*n - (i-2)*(i-1)/2 + (j-i);
+        A[index] = x;
+    }
+}
+
+
+int get(int A[], int n, int i, int j) {
+    if (i <= j) {
+        int index = (i-1)*n - (i-2)*(i-1)/2 + (j-i);
+        return A[index];
+    }
+    return 0;
+}
+
+
+void display(int A[], int n) {
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
+            cout << get(A, n, i, j) << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    int n = 4;
+    int size = n*(n+1)/2;   
+    int A[size] = {0};
+
+    
+    set(A, n, 1,1,1);
+    set(A, n, 1,2,2);
+    set(A, n, 1,3,3);
+    set(A, n, 1,4,4);
+    set(A, n, 2,2,5);
+    set(A, n, 2,3,6);
+    set(A, n, 2,4,7);
+    set(A, n, 3,3,8);
+    set(A, n, 3,4,9);
+    set(A, n, 4,4,10);
+
+    cout << "Upper Triangular Matrix:" << endl;
+    display(A, n);
+
+    return 0;
+}/*
