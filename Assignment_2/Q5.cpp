@@ -192,3 +192,62 @@ int main() {
 
     return 0;
 }/*
+
+/*
+
+
+void set(int A[], int n, int i, int j, int x) {
+    if (i >= j) {
+        int index = (i*(i-1))/2 + (j-1);
+        A[index] = x;
+    }
+    else { // use symmetry: store in lower part
+        int index = (j*(j-1))/2 + (i-1);
+        A[index] = x;
+    }
+}
+
+
+int get(int A[], int n, int i, int j) {
+    if (i >= j) {
+        int index = (i*(i-1))/2 + (j-1);
+        return A[index];
+    }
+    else {
+        int index = (j*(j-1))/2 + (i-1);
+        return A[index];
+    }
+}
+
+// Display full matrix
+void display(int A[], int n) {
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
+            cout << get(A, n, i, j) << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    int n = 4;
+    int size = n*(n+1)/2;   
+    int A[size] = {0};
+
+   
+    set(A, n, 1,1,1);
+    set(A, n, 2,1,2);
+    set(A, n, 2,2,3);
+    set(A, n, 3,1,4);
+    set(A, n, 3,2,5);
+    set(A, n, 3,3,6);
+    set(A, n, 4,1,7);
+    set(A, n, 4,2,8);
+    set(A, n, 4,3,9);
+    set(A, n, 4,4,10);
+
+    cout << "Symmetric Matrix:" << endl;
+    display(A, n);
+
+    return 0;
+}
