@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#define MAX 100   // maximum stack size
+#define MAX 100   
 
 class Stack {
     char arr[MAX];
